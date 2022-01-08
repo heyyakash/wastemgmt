@@ -1,6 +1,9 @@
+const join =require('path');
 module.exports = {
   plugins: {
-    tailwindcss: {},
+    tailwindcss: {
+      config:join("./","tailwind.config.js")
+    },
     autoprefixer: {},
   },
 }
