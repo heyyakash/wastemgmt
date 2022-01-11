@@ -9,8 +9,15 @@
     @apply box-border m-0 p-0;
   }
   body{
-    @apply m-0 p-0 xl:bg-[#e3ffe4] bg-white ;
+    @apply m-0 p-0 xl:bg-[#e3ffe4]  bg-gradient-to-r from-[#138f38] to-[#00ffde] ;
   }
 
 }
 
+
+.animateSuccess{
+  -webkit-transition: all 0.7s 0s ease-in;
+  -moz-transition: all 0.7s 0s ease-in;
+  -o-transition: all 0.7s 0s ease-in;
+  transition: all 0.7s 0s ease-in;
+}
