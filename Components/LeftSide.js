@@ -34,7 +34,9 @@ function LeftSide() {
                 <img className="rounded-full xl:h-[100px] xl:w-[100px] h-[40px] w-[40px]" src={session.user.image} alt="" />
                 
             </div>
-            <h1 className="text-white text-xl font-semibold hidden xl:block">Heyy {session.user.name.split(" ")[0]}!</h1>
+            <div className='w-full py-2 px-2 flex justify-center items-center'>
+                <h1 className="text-white text-xl font-semibold hidden xl:block">Heyy {session.user.name.split(" ")[0]}!</h1></div>
+            
 
             <div className="xl:h-[100px] w-[120px] gap-3 drop-shadow-xl  ml-auto xl:ml-0 bg-green-500/50 hover:bg-opacity-[0.7] justify-center items-center transition duration-100 xl:mt-2 text-white flex flex-col  bg-opacity-[.9] cursor-pointer rounded-lg">
                 <h1 className="text-2xl">{qty}</h1>

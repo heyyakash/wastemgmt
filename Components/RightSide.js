@@ -46,9 +46,9 @@ function RightSide({setSuccess ,setReward}) {
 
             });
             setReward(credit);
-            setSuccess("block");
+            setSuccess("top-[20px]");
             setTimeout(() => {
-                setSuccess("hidden")
+                setSuccess("-top-[1000%]")
             }, 4000);
             setQty(0);
             setAction("");
@@ -85,7 +85,7 @@ function RightSide({setSuccess ,setReward}) {
                 <input type="text" placeholder="Action" onChange={()=>console.log("Hello") } value = {action} className="w-[120px] border-2 outline-none rounded-md border-green-300 p-2" />
                 <button onClick={handleSubmit} disabled = {loading?true:false || qty ? false:true } className="py-2 px-4 shadow-xl shadow-green-200 disabled:opacity-[0.5] rounded-md bg-green-500 text-white ml-0 xl:ml-auto">Donate</button>
             </div>
-            <div className="w0full xl:w-[90%] flex flex-col">
+            <div className="w-full xl:w-[90%] h-[700px] overflow-auto flex flex-col">
                 <div className="w-[100%] text-md mb-2 text-white flex gap-2">
                     <div className="bg-green-500 w-[60px] border-green-300 border-l-2 py-[2px] flex justify-start items-center pl-2 pr-4">Qty</div>
                     <div className="bg-green-500 flex-1 border-green-300 border-l-2  w-[350px] flex justify-start items-center px-2">Comodity</div>

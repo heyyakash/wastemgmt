@@ -5,7 +5,7 @@ import {useState} from "react";
 
 function Dashboard() {
     const [reward, setReward] =useState("");
-    const [success , setSuccess] = useState("hidden")
+    const [success , setSuccess] = useState("-top-[1000%]")
     
     return (
         <div className="w-full drop-shadow-2xl min-h-[100vh] flex justify-center relative items-center">
@@ -24,7 +24,7 @@ function Dashboard() {
                         <img src="/smily.png" className="h-full w-full" alt="" />
                     </div>    
                 </div>
-                <div className="flex-1 border-4 border-green-400 pl-4 pt-4 bg-white/80">
+                <div className="flex-1 border-4 border-green-400 pl-4 pt-4 bg-white">
                     <h1 className="text-2xl font-lilita text-green-400 font-light">Thank you for Donating</h1>
                     <p className="text-green-400">Your Donation means a lot. Thank you for helping us and congratulations,</p>
                     <p>{`You Earned +${reward} Points`}</p>
