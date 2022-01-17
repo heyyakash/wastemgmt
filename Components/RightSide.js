@@ -46,9 +46,9 @@ function RightSide({setSuccess ,setReward}) {
 
             });
             setReward(credit);
-            setSuccess("top-[20px]");
+            setSuccess("block");
             setTimeout(() => {
-                setSuccess("-top-[1000%]")
+                setSuccess("hidden")
             }, 4000);
             setQty(0);
             setAction("");
@@ -76,7 +76,7 @@ function RightSide({setSuccess ,setReward}) {
             </div>
             <div className="my-8 w-full xl:w-[90%] p-[2px] gap-2 flex flex-wrap">
                 <input type="number" min = "1" max = "3" value = {qty} onChange={(e)=>setQty(e.target.value)} placeholder="Qty" className="w-[80px] border-2 outline-none rounded-md border-green-300 p-2" />
-                <select onChange={handleSelect} value="Commodity" className="outline-none border-2 border-green-300 pl-2 xl:w-[300px] rounded-md text-gray-400" >
+                <select onChange={handleSelect} className="outline-none border-2 border-green-300 pl-2 xl:w-[300px] rounded-md text-gray-400" >
                     <option value="Commodity" disabled >Commodity</option>
                     <option value={`Stale Food (less than a day old)`}>{`Stale Food (less than a day old)`}</option>
                     <option value={`Stale Food (More than a day old)`}>{`Stale Food (More than a day old)`}</option>

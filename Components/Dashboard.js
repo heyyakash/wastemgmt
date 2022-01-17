@@ -5,7 +5,7 @@ import {useState} from "react";
 
 function Dashboard() {
     const [reward, setReward] =useState("");
-    const [success , setSuccess] = useState("-top-[1000%]")
+    const [success , setSuccess] = useState("hidden")
     
     return (
         <div className="w-full drop-shadow-2xl min-h-[100vh] flex justify-center relative items-center">
