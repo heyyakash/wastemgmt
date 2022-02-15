@@ -71,26 +71,31 @@ function RightSide({setSuccess ,setReward}) {
     }, [db])
     return (
         <div className="xl:flex-[0.8] z-[100] flex-1 flex flex-col p-8 h-full backdrop-blur-md bg-white/80 ">
+           
             <div className="flex items-end w-full xl:w-[90%]"><h1 className="text-3xl text-green-400 ">Your Contributions</h1>
-                <p onClick={()=>signOut()} className="text-green-400 cursor-pointer ml-auto">SignOut</p>
+                <p onClick={()=>signOut()} className="text-green-400 bg-white/60 py-1 px-3 border-l drop-shadow-sm border-green-400 hover:bg-white transition cursor-pointer ml-auto">Logout</p>
             </div>
+           
             <div className="my-8 w-full xl:w-[90%] p-[2px] gap-2 flex flex-wrap">
                 <input type="number" min = "1" max = "3" value = {qty} onChange={(e)=>setQty(e.target.value)} placeholder="Qty" className="w-[80px] border-2 outline-none rounded-md border-green-300 p-2" />
                 <select onChange={handleSelect} className="outline-none border-2 border-green-300 pl-2 xl:w-[300px] rounded-md text-gray-400" >
-                    <option value="Commodity" disabled >Commodity</option>
+                    <option value="Commodity" disabled selected>Commodity</option>
                     <option value={`Stale Food (less than a day old)`}>{`Stale Food (less than a day old)`}</option>
                     <option value={`Stale Food (More than a day old)`}>{`Stale Food (More than a day old)`}</option>
                     <option value="Plastic Bottle">Plastic Bottle</option>
                 </select>
                 <input type="text" placeholder="Action" onChange={()=>console.log("Hello") } value = {action} className="w-[120px] border-2 outline-none rounded-md border-green-300 p-2" />
-                <button onClick={handleSubmit} disabled = {loading?true:false || qty ? false:true } className="py-2 px-4 shadow-xl shadow-green-200 disabled:opacity-[0.5] rounded-md bg-green-500 text-white ml-0 xl:ml-auto">Donate</button>
+                <button onClick={handleSubmit} disabled = {loading?true:false || qty ? false:true } className="py-2 px-4 shadow-xl shadow-green-300 disabled:opacity-[0.5] rounded-md bg-green-500 text-white ml-0 xl:ml-auto">Donate</button>
             </div>
+
+            {/* =================== TABLE ==================== */}
+
             <div className="w-full xl:w-[90%] h-[700px] overflow-auto flex flex-col">
                 <div className="w-[100%] text-md mb-2 text-white flex gap-2">
-                    <div className="bg-green-500 w-[60px] border-green-300 border-l-2 py-[2px] flex justify-start items-center pl-2 pr-4">Qty</div>
-                    <div className="bg-green-500 flex-1 border-green-300 border-l-2  w-[350px] flex justify-start items-center px-2">Comodity</div>
-                    <div className="bg-green-500 border-green-300 border-l-2 flex justify-start w-[100px] items-center pl-2">Action</div>
-                    <div className="bg-green-500  border-green-300 border-l-2 flex justify-start w-[120px] items-center pl-2 ">Points Earned</div>
+                    <div className="row w-[60px] py-[2px]">Qty</div>
+                    <div className="row flex-1 w-[350px] px-2">Comodity</div>
+                    <div className="row w-[100px]">Action</div>
+                    <div className="row w-[120px]">Points Earned</div>
                 </div>
 
               {post.map((posts)=>{
@@ -98,6 +103,8 @@ function RightSide({setSuccess ,setReward}) {
                   <Post id ={posts.id} key = {posts.id} qty = {posts.data().qty} commodity = {posts.data().commodity} credit = {posts.data().credit} action = {posts.data().action} />
               )})}
             </div>
+        
+        
         </div>
     )
 }

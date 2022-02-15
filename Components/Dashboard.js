@@ -13,8 +13,8 @@ function Dashboard() {
                 <LeftSide  />
                 <RightSide setSuccess = {setSuccess} setReward = {setReward} /> 
                 <img src="/baloon.svg" className="hidden xl:block absolute z-0 h-[200px] -right-32 top-2" alt="" />   
-            <img src="/enjoy.svg" className="hidden xl:block absolute rotate-[-45deg] z-0 h-[200px] -left-28 top-40" alt="" />
-            <img src="/tree.svg" className="hidden xl:block absolute  z-0 h-[200px] -right-32 -bottom-10" alt="" />     
+                <img src="/enjoy.svg" className="hidden xl:block absolute rotate-[-45deg] z-0 h-[200px] -left-28 top-40" alt="" />
+                <img src="/tree.svg" className="hidden xl:block absolute  z-0 h-[200px] -right-32 -bottom-10" alt="" />     
             </div>
 
             {/* ================ Success Message ================ */}

@@ -9,15 +9,15 @@
     @apply box-border m-0 p-0;
   }
   body{
-    @apply m-0 p-0 xl:bg-[#e3ffe4]  bg-gradient-to-r from-[#138f38] to-[#00ffde] ;
+    @apply m-0 p-0  bg-gradient-to-r from-[#00c9ff] to-[#92fe9d]   ;
   }
 
 }
-
-
-.animateSuccess{
-  -webkit-transition: all 0.7s 0s ease-in;
-  -moz-transition: all 0.7s 0s ease-in;
-  -o-transition: all 0.7s 0s ease-in;
-  transition: all 0.7s 0s ease-in;
+@layer components{
+  .row{
+    @apply bg-green-400 border-green-400 text-white border-l-2 flex justify-start items-center pl-2 ;
+  }
+  .subRow{
+    @apply bg-white border-l-[2.5px] border-green-300 flex justify-start items-center ;
+  }
 }
