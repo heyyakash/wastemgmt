@@ -46,10 +46,10 @@ function RightSide({setSuccess ,setReward}) {
 
             });
             setReward(credit);
-            setSuccess("block");
+            setSuccess("top-12");
             setTimeout(() => {
-                setSuccess("hidden")
-            }, 4000);
+                setSuccess("top-[-1000%]")
+            }, 6000);
             setQty(0);
             setAction("");
             setSelect("");

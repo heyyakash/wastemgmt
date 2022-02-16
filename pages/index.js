@@ -17,7 +17,7 @@ export default function Home({providers}) {
     
       </Head>
 
-      <main>
+      <main className='relative'>
         <Dashboard  />
       </main>
      
