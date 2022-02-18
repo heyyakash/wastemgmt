@@ -93,7 +93,7 @@ function RightSide({setSuccess ,setReward}) {
             <div className="w-full xl:w-[90%] h-[700px] overflow-auto flex flex-col">
                 <div className="w-[100%] text-md mb-2 text-white flex gap-2">
                     <div className="row w-[60px] py-[2px]">Qty</div>
-                    <div className="row flex-1 w-[350px] px-2">Comodity</div>
+                    <div className="row w-[200px] xl:w-[350px] px-2">Comodity</div>
                     <div className="row w-[100px]">Action</div>
                     <div className="row w-[120px]">Points Earned</div>
                 </div>

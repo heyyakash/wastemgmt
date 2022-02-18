@@ -22,7 +22,7 @@ function Dashboard() {
 
             </div>
 
-            <div className={`absolute text-[lightseagreen] flex flex-col xl:flex-row gap-4 bg-white/50 h-[170px] w-[500px] z-10 ${success} rounded-xl p-4 left-0 right-0 backdrop-blur-md mx-auto transition-all duration-1000`}>
+            <div className={`absolute hidden text-[lightseagreen] xl:flex flex-col xl:flex-row gap-4 bg-white/50 h-[170px] w-[500px] z-10 ${success} rounded-xl p-4 left-0 right-0 backdrop-blur-md mx-auto transition-all duration-1000`}>
                 <div className="h-full">
                     <h1 className="text-[lightseagreen] text-2xl">Thank You</h1>
                     <p className="mt-4">We appreciate your help in this noble cause. Thank you so much for this. You have earnerd +{reward} points</p>
